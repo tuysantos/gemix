@@ -1,0 +1,14 @@
+
+<div class="container">
+    <div class="container-wrapper">
+        <div id="strMessage" class="info-prize" [ngClass]="{'margin-prize-claimed': claimed, 'margin-prize': !claimed}">{{message}}</div>
+        <div class="info-counter" [hidden]="claimed" >{{countDown}}</div>
+        <div>
+            <button id="btnClaim" (click)="claimNow()"  class="btn-claim" [ngClass]="{'disbled-button': claimed}" [disabled]="isDisabled">
+                <span [hidden]="claimed">Claim now</span>
+                <img [hidden]="!claimed" src="../../../assets/img/icon-tick.svg"/>
+            </button>
+        </div>
+    </div>
+    
+</div>
